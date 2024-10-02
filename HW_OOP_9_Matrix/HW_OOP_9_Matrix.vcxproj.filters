@@ -26,5 +26,8 @@
     <ClInclude Include="MyMatrix.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TMyMatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

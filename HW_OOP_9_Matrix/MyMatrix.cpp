@@ -126,7 +126,7 @@ void MyMatrix::Input()
 	{
 		for (int j = 0; j < cols; j++)
 		{
-			ptr[i][j] = rand() % 10;
+			ptr[i][j] = rand()% 10;
 		}
 	}
 }

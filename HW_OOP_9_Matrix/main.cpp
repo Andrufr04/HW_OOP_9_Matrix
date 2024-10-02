@@ -1,5 +1,5 @@
 #include<iostream>
-#include "MyMatrix.h"
+#include "TMyMatrix.h"
 using namespace std;
 
 // Создать класс для работы с матрицами.
@@ -17,13 +17,33 @@ using namespace std;
 
 int main()
 {
+	srand(time(0));
+
+	MyMatrix<double> m(3, 3);
+	m.Input();
+	m.Print();
+
+	//cout << endl << m.GetEl(0, 0) << endl << endl;
+
+	MyMatrix<double> obj2 = m.Transpose();
+	obj2.Print();
+
+	MyMatrix<int> m1(3, 3);
+	m1.Input();
+	m1.Print();
+
+
+
+
+
+
 	// транспонирование
-	MyMatrix obj1(5, 2);
+	/*MyMatrix obj1(5, 2);
 	obj1.Input();
 	obj1.Print();
 	cout << endl;
 	MyMatrix obj2 = obj1.Transpose();
-	obj2.Print();
+	obj2.Print();*/
 
 	// умн
 	/*MyMatrix obj1(2, 2);
@@ -53,4 +73,5 @@ int main()
 	MyMatrix obj3 = obj1.Sum(obj2);
 	obj3.Print();*/
 
+	return 0;
 }
