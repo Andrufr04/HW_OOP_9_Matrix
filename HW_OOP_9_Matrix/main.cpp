@@ -1,5 +1,6 @@
 #include<iostream>
 #include "TMyMatrix.h"
+#include "Point.h"
 using namespace std;
 
 // Создать класс для работы с матрицами.
@@ -19,23 +20,27 @@ int main()
 {
 	srand(time(0));
 
-	MyMatrix<double> m(3, 3);
+	MyMatrix<Point> m1(2, 3);
+	MyMatrix<Point> m2(2, 3);
+
+
+	/*MyMatrix<double> m(3, 3);
 	m.Input();
 	m.Print();
 
+	cout << endl;*/
+
+	/*cout << endl << "min el: " << m.Min() << endl;
+	cout << endl << "max el: " << m.Max() << endl;*/
+
 	//cout << endl << m.GetEl(0, 0) << endl << endl;
 
-	MyMatrix<double> obj2 = m.Transpose();
+	/*MyMatrix<double> obj2 = m.Transpose();
 	obj2.Print();
 
 	MyMatrix<int> m1(3, 3);
 	m1.Input();
-	m1.Print();
-
-
-
-
-
+	m1.Print();*/
 
 	// транспонирование
 	/*MyMatrix obj1(5, 2);

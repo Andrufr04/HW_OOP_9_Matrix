@@ -22,6 +22,10 @@ public:
 
     void Input();
     void Print() const;
+
+    T Min();
+    T Max();
+
     ~MyMatrix();
 };
 
@@ -179,6 +183,45 @@ void MyMatrix<T>::Print() const
         cout << endl << endl;
     }
 }
+
+template <typename T>
+T MyMatrix<T>::Min()
+{
+    int min = ptr[0][0];
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            if (min > ptr[i][j])
+            {
+                min = ptr[i][j];
+            }
+        }
+    }
+
+    return min;
+}
+
+template <typename T>
+T MyMatrix<T>::Max()
+{
+    int max = ptr[0][0];
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            if (max < ptr[i][j])
+            {
+                max = ptr[i][j];
+            }
+        }
+    }
+
+    return max;
+}
+
+
+
 
 template <typename T>
 MyMatrix<T>::~MyMatrix()
